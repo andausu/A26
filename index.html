@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Animazione Arbatax Park 2026</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-title">
+      <span>Animazione Arbatax Park</span>
+      <small>Programma giornaliero 2026</small>
+    </div>
+    <div id="data-odierna" class="topbar-date"></div>
+
+    <div class="tabs">
+      <button id="btn-giorno" class="tab active" data-fascia="Giorno">Giorno</button>
+      <button id="btn-sera" class="tab" data-fascia="Sera">Sera</button>
+    </div>
+
+    <div id="filtri-settori" class="pill-row">
+      <button data-settore="TUTTI" class="pill pill-outline active">Tutti</button>
+      <button data-settore="VIK" class="pill pill-verde">VIK</button>
+      <button data-settore="SPORT" class="pill pill-blu">Sport</button>
+      <button data-settore="SPETTACOLI" class="pill pill-viola">Spettacoli</button>
+      <button data-settore="RANGER" class="pill pill-arancione">Ranger</button>
+      <button data-settore="TORNEI" class="pill pill-giallo">Tornei</button>
+      <button data-settore="FITNESS" class="pill pill-giallo">Fitness</button>
+      <button data-settore="PIANOBAR" class="pill pill-oro">Pianobar</button>
+    </div>
+  </header>
+
+  <main class="content">
+    <div id="empty-state" class="empty-state">
+      Nessuna attività per oggi in questa fascia.  
+      Controlli il foglio oppure cambi fascia/settore.
+    </div>
+    <section id="lista-attivita"></section>
+  </main>
+
+  <footer class="footer">
+    <small>Versione MVP – uso interno animazione Peter Pan</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
