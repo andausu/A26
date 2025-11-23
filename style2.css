@@ -1,0 +1,197 @@
+/* Impostazioni generali */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f3f3f3;
+  color: #1A1A1A;
+}
+
+/* Header fissato in alto, mobile-first */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #ffffff;
+  padding: 12px 12px 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+}
+
+.topbar-title {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.topbar-title small {
+  font-size: 11px;
+  font-weight: 400;
+  color: #666;
+}
+
+.topbar-date {
+  margin-top: 4px;
+  font-size: 13px;
+  color: #444;
+}
+
+/* Tabs Giorno/Sera */
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.tab {
+  flex: 1;
+  padding: 8px 0;
+  font-size: 14px;
+  border-radius: 999px;
+  border: 1px solid #ddd;
+  background: #fafafa;
+  cursor: pointer;
+}
+
+.tab.active {
+  background: #1A1A1A;
+  color: #fff;
+  border-color: #1A1A1A;
+}
+
+/* Colonna di tag settoriali con scroll verticale */
+.pill-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 10px;
+  max-height: 220px;        /* altezza massima visibile */
+  overflow-y: auto;         /* scroll verticale se non basta lo spazio */
+  padding-right: 4px;
+}
+
+/* Scrollbar sottile in verticale (solo dove supportato) */
+.pill-row::-webkit-scrollbar {
+  width: 4px;
+}
+.pill-row::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.2);
+  border-radius: 999px;
+}
+
+/* Rettangoli cliccabili per i settori */
+.pill {
+  flex-shrink: 0;
+  padding: 8px 10px;
+  font-size: 13px;
+  border-radius: 10px;      /* rettangolo morbido */
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  text-align: left;         /* testo allineato a sinistra */
+}
+
+.pill-outline {
+  background: #ffffff;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+.pill-verde    { background: #2ECC71; }
+.pill-blu      { background: #2980B9; }
+.pill-viola    { background: #8E44AD; }
+.pill-arancione{ background: #E67E22; }
+.pill-giallo   { background: #F1C40F; color:#000; }
+.pill-oro      { background: #D4AF37; }
+
+.pill.active {
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.12);
+}
+
+/* Contenuto principale */
+.content {
+  padding: 10px 8px 60px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Stato vuoto */
+.empty-state {
+  display: none;
+  padding: 12px 10px;
+  margin: 8px;
+  border-radius: 8px;
+  background: #fff4d6;
+  border: 1px solid #f1c40f;
+  font-size: 13px;
+}
+
+/* Card attività */
+.card {
+  background: #ffffff;
+  border-radius: 10px;
+  margin: 8px;
+  padding: 10px 12px;
+  border-left: 5px solid #cccccc;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.card-title {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.card-time {
+  font-size: 13px;
+  color: #555;
+}
+
+.card-meta {
+  margin-top: 4px;
+  font-size: 12px;
+  color: #666;
+}
+
+.card-note {
+  margin-top: 4px;
+  font-size: 12px;
+}
+
+/* Colori bordo per settori */
+.border-VIK        { border-left-color: #2ECC71; }
+.border-SPORT      { border-left-color: #2980B9; }
+.border-SPETTACOLI { border-left-color: #8E44AD; }
+.border-RANGER     { border-left-color: #E67E22; }
+.border-TORNEI     { border-left-color: #F1C40F; }
+.border-FITNESS    { border-left-color: #F1C40F; }
+.border-PIANOBAR   { border-left-color: #D4AF37; }
+
+/* Footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 6px 8px;
+  font-size: 11px;
+  background: #ffffff;
+  border-top: 1px solid #ddd;
+}
+
+/* Migliorie su schermi più larghi */
+@media (min-width: 768px) {
+  .content {
+    padding-top: 16px;
+  }
+}
